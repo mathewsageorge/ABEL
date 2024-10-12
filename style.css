@@ -359,7 +359,7 @@ a:hover{
 
 /* <===================HANDS===================> */
 
-/* .hands{
+.hands{
     height: 120vh;
     width: 100%;
     background-image: url(https://firebasestorage.googleapis.com/v0/b/chuck-842bb.appspot.com/o/GurAmanWed%2Fpic6.jpg?alt=media&token=febecde7-9479-4a1e-8402-28f021228422);
@@ -367,7 +367,7 @@ a:hover{
     background-position-y: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-} */
+}
 
     /* <===================STAY===================> */
     #stay{
@@ -475,8 +475,4 @@ footer{
 footer h2{
     font-size: 2Srem;
     font-weight: normal;
-}
-
-audio {
-    display: none; /* Hides the audio controls */
 }
