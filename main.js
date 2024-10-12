@@ -71,3 +71,35 @@ window.addEventListener("scroll", reveal);
 // window.addEventListener("touchstart", playMusicOnInteraction);
 // window.addEventListener("keydown", playMusicOnInteraction);
 
+// ... existing code ...
+
+function updateCountdown() {
+  const countdownElement = document.getElementById("countdown");
+  const eventDate = new Date("Jan 05, 2025 00:00:00").getTime();
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  countdownElement.innerHTML = `
+      <div class="countdown-message">This much time to go!</div>
+      <div class="countdown-values">
+          <span class="countdown-item">${days}<small>Days</small></span>
+          <span class="countdown-item">${hours}<small>Hours</small></span>
+          <span class="countdown-item">${minutes}<small>Minutes</small></span>
+          <span class="countdown-item">${seconds}<small>Seconds</small></span>
+      </div>
+  `;
+
+  if (distance < 0) {
+      clearInterval(countdownInterval);
+      countdownElement.innerHTML = "Event Started";
+  }
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// ... existing code ...
