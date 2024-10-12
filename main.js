@@ -1,7 +1,12 @@
 const parallax = document.getElementById("home-img-lg");
 const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
-const audio = document.getElementById("background-audio"); // Reference to the audio element
+// const audio = document.getElementById("background-audio"); // Reference to the audio element
+
+$(document).on('click', function(){
+  document.getElementById("my_audio").play();
+  console.log('Shaadi me zaroor aana');
+});
 
 
 window.addEventListener("scroll", function()
@@ -49,19 +54,20 @@ for (var i = 0; i < reveals.length; i++) {
   
 window.addEventListener("scroll", reveal);
 
-// Music play on first interaction
-function playMusicOnInteraction() {
-  if (audio) {
-      audio.play();  // Play the audio
-  }
+// // Music play on first interaction
+// function playMusicOnInteraction() {
+//   if (audio) {
+//       audio.play();  // Play the audio
+//   }
 
-  // Remove event listeners after the first interaction
-  window.removeEventListener("click", playMusicOnInteraction);
-  window.removeEventListener("touchstart", playMusicOnInteraction);
-  window.removeEventListener("keydown", playMusicOnInteraction);
-}
+//   // Remove event listeners after the first interaction
+//   window.removeEventListener("click", playMusicOnInteraction);
+//   window.removeEventListener("touchstart", playMusicOnInteraction);
+//   window.removeEventListener("keydown", playMusicOnInteraction);
+// }
 
-// Attach event listeners to play music on any interaction
-window.addEventListener("click", playMusicOnInteraction);
-window.addEventListener("touchstart", playMusicOnInteraction);
-window.addEventListener("keydown", playMusicOnInteraction);
+// // Attach event listeners to play music on any interaction
+// window.addEventListener("click", playMusicOnInteraction);
+// window.addEventListener("touchstart", playMusicOnInteraction);
+// window.addEventListener("keydown", playMusicOnInteraction);
+
