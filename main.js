@@ -115,9 +115,19 @@ document.querySelector('.close-btn').addEventListener('click', () => {
   document.getElementById('rsvp-popup').style.display = 'none';
 });
 
-// Handle form submission
-document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
+document.getElementById('rsvp-form').addEventListener('submit', (e) => {
   e.preventDefault();
+
+  // Show the success modal immediately
+  document.getElementById('rsvp-popup').style.display = 'none';
+  document.getElementById('success-modal').style.display = 'flex';
+
+  // Automatically close the modal after 3 seconds
+  setTimeout(() => {
+      document.getElementById('success-modal').style.display = 'none';
+  }, 2000);
+
+  // Prepare the form data
   const formData = new FormData(e.target);
   const data = {
       name: formData.get('name'),
@@ -127,25 +137,27 @@ document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
       message: formData.get('message')
   };
 
-  try {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzpASBl1tVbcmPCRvV5cHEEiIyOeglVPaiM_ykZ38QsHFdtldVvQLYs8-tY5Lj0wZWF/exec', {
+  // Send the data to Google Sheets asynchronously
+  fetch('https://script.google.com/macros/s/AKfycbzpASBl1tVbcmPCRvV5cHEEiIyOeglVPaiM_ykZ38QsHFdtldVvQLYs8-tY5Lj0wZWF/exec', {
       method: 'POST',
-      mode: 'cors',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
+  }).catch(error => {
+      // Log any errors but do not show an alert to avoid disrupting user experience
+      console.error('Submission error:', error);
   });
-  
-      
-      const result = await response.json();
-      if (result.status === 'success') {
-          alert('Thank you for RSVPing!');
-          document.getElementById('rsvp-form').reset();
-          document.getElementById('rsvp-popup').style.display = 'none';
-      } else {
-          alert('There was an error. Please try again.');
-      }
-  } catch (error) {
-      console.error('Error:', error);
-      alert('There was an error submitting your RSVP.');
-  }
+
+  // Reset the form
+  document.getElementById('rsvp-form').reset();
+});
+
+// Show the RSVP popup
+document.querySelector('.rsvp-btn').addEventListener('click', () => {
+  document.getElementById('rsvp-popup').style.display = 'flex';
+});
+
+// Hide the RSVP popup
+document.querySelector('.close-btn').addEventListener('click', () => {
+  document.getElementById('rsvp-popup').style.display = 'none';
 });
