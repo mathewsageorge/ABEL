@@ -103,3 +103,49 @@ function updateCountdown() {
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 // ... existing code ...
+
+
+// Show the RSVP popup
+document.querySelector('.rsvp-btn').addEventListener('click', () => {
+  document.getElementById('rsvp-popup').style.display = 'flex';
+});
+
+// Hide the RSVP popup
+document.querySelector('.close-btn').addEventListener('click', () => {
+  document.getElementById('rsvp-popup').style.display = 'none';
+});
+
+// Handle form submission
+document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      guests: formData.get('guests'),
+      message: formData.get('message')
+  };
+
+  try {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzpASBl1tVbcmPCRvV5cHEEiIyOeglVPaiM_ykZ38QsHFdtldVvQLYs8-tY5Lj0wZWF/exec', {
+      method: 'POST',
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+  });
+  
+      
+      const result = await response.json();
+      if (result.status === 'success') {
+          alert('Thank you for RSVPing!');
+          document.getElementById('rsvp-form').reset();
+          document.getElementById('rsvp-popup').style.display = 'none';
+      } else {
+          alert('There was an error. Please try again.');
+      }
+  } catch (error) {
+      console.error('Error:', error);
+      alert('There was an error submitting your RSVP.');
+  }
+});

@@ -139,8 +139,24 @@
 
             <div class="parting-message reveal">
                 <h1>Hope to See You!</h1>
-                <button class="huge-btn">RSVP</button>
+                <button class="rsvp-btn huge-btn">RSVP</button>
             </div>
+
+           <!-- Popup RSVP Form -->
+    <div id="rsvp-popup" class="popup-overlay">
+        <div class="popup-content animated-popup">
+            <h2>RSVP to Our Wedding</h2>
+            <form id="rsvp-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+                <textarea name="message" placeholder="Message (optional)"></textarea>
+                <button type="submit">Submit</button>
+                <button type="button" class="close-btn">Close</button>
+            </form>
+        </div>
+    </div>
 
 
             <footer>
