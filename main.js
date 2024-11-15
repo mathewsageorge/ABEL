@@ -125,7 +125,7 @@ document.getElementById('rsvp-form').addEventListener('submit', (e) => {
   // Automatically close the modal after 3 seconds
   setTimeout(() => {
       document.getElementById('success-modal').style.display = 'none';
-  }, 2000);
+  }, 2800);
 
   // Prepare the form data
   const formData = new FormData(e.target);
