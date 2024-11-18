@@ -693,4 +693,12 @@ footer h2{
     }
 }
 
+/* Default: Show desktop image, hide mobile image */
+.desktop-image {
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
 
