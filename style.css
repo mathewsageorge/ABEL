@@ -290,7 +290,7 @@ a:hover{
         width: 100%;
         font-size: var(--h3-size);
         position: relative;
-        bottom: 122px;
+        bottom: 100px;
          /* Center-align heading */
     }
     #story p {
