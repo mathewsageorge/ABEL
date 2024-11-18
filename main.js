@@ -161,3 +161,11 @@ document.querySelector('.rsvp-btn').addEventListener('click', () => {
 document.querySelector('.close-btn').addEventListener('click', () => {
   document.getElementById('rsvp-popup').style.display = 'none';
 });
+
+window.onload = function() {
+  document.getElementById('welcome-popup').classList.add('show');
+};
+
+function closePopup() {
+  document.getElementById('welcome-popup').classList.remove('show');
+}
