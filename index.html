@@ -8,7 +8,9 @@
     <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
-    <title>Wedding Invite</title>
+    <!-- Include the canvas-confetti library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <title>Aaron. & Kevin. Wedding Invite</title>
 </head>
 <body>
     <!-- <audio id="background-audio" src="/A-Thousand-Years(PagalWorld).mp3" preload="auto"></audio> -->
@@ -36,7 +38,7 @@
         <div class="container-out">
             
             <div class="container-in text">
-                Sunday, Jan. 5, 2024 <br>
+                Monday, Jan. 6, 2024 <br>
                 St. Paul's Orthodox Church, Kollad Kottayam
                 <br>
                 <div id="countdown" class="countdown-timer"></div>
@@ -58,10 +60,10 @@
             <div class="timeline-img"></div>
             <div class="timings">
                 <h3>01.&nbsp &nbsp Ceremony</h3>
-                <div class="text">Sunday, Jan. 5, 2024 <br>
+                <div class="text">Monday, Jan. 6, 2024 <br>
                     St. Paul's Orthodox Church, Kollad Kottayam</div>
                 <h3>02.&nbsp &nbsp Reception</h3>
-                <div class="text">Sunday, Jan. 5, 2024 <br>
+                <div class="text">Monday, Jan. 6, 2024 <br>
                     Windsor Castle, Kodimatha, Kottayam.</div>
             </div>
         </div>
@@ -155,9 +157,9 @@
                 <div class="registry-container reveal">
                     <h3>Promises</h3>
                     <div class="text">
-                        I will provide welfare and happiness for you and the children that we bear and you shall offer me food and help whenever it is required. Together, we will protect our children and home and stand as each other's strength and courage. I will put every other person secodary to you. You make my like complete and promise to respect you. God bless you, my best friend. I pray thee, may my presence fill our life with joy and prospers.
+                        I vow to walk beside you as your partner, your confidant, and your greatest supporter. I promise to cherish and care for you, to celebrate our joys and weather our challenges together. Together, we will build a home filled with love, laughter, and understanding, always putting each other first. You are my heart, my strength, and my greatest blessing. I promise to honor, respect, and love you unconditionally, and to fill our life with happiness, adventure, and unwavering commitment. Here's to a lifetime of love and partnership, my best friend and soulmate.
                     </div>
-                    <button class="huge-btn text">BLESS US</button>
+                    <button class="huge-btn text" id="bless-us-btn">BLESS US</button>
                 </div>
                 <div class="registry-img registry-img-lg" id="parallax2"></div>
             </div>
@@ -204,6 +206,18 @@
             </footer>
         </div>
     </div>
+ 
+<script>
+    // Add event listener to the "BLESS US" button
+    document.getElementById('bless-us-btn').addEventListener('click', function() {
+        // Trigger the confetti effect
+        confetti({
+            particleCount: 500,
+            spread: 100,
+            origin: { y: 0.6 }
+        });
+    });
+    </script>
 
     <script src="main.js"></script>
 </body>

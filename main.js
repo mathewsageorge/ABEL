@@ -75,7 +75,7 @@ window.addEventListener("scroll", reveal);
 
 function updateCountdown() {
   const countdownElement = document.getElementById("countdown");
-  const eventDate = new Date("Jan 05, 2025 00:00:00").getTime();
+  const eventDate = new Date("Jan 06, 2025 00:00:00").getTime();
   const now = new Date().getTime();
   const distance = eventDate - now;
 
