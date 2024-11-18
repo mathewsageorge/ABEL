@@ -303,6 +303,8 @@ a:hover{
         width: 460px; /* Scale down the image for smaller screens */
         max-width: 400px; /* Limit the maximum width */ /* Add some spacing */
         object-fit: contain; /* Ensure proper scaling */
+        position: relative;
+        bottom: 50px;
     }
 }
 
