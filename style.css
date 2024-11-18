@@ -259,41 +259,53 @@ a:hover{
 
 /* <===================STORY===================> */
 
-#story{
+#story {
     padding-top: 10vh;
     display: flex;
     flex-direction: row;
     margin: 10vh 0;
 }
-#story h3{
+
+#story h3 {
     width: 40vw;
 }
-#story p{
+
+#story p {
     width: 40vw;
     text-align: justify;
     font-size: var(--h3-size);
     line-height: var(--h3-size);
 }
-@media (max-width:1000px){
-    .h-reposition-container{
+
+@media (max-width: 1000px) {
+    .h-reposition-container {
         position: relative;
         top: 0;
     }
-    #story{
+    #story {
         flex-direction: column;
+        align-items: center; /* Center-align content for smaller screens */
     }
-    #story h3{
+    #story h3 {
         width: 100%;
-        margin: 5px 0;
         font-size: var(--h3-size);
+        position: relative;
+        bottom: 122px;
+         /* Center-align heading */
     }
-    #story p{
+    #story p {
         width: 100%;
         margin: 5px 0;
         font-size: var(--text-size);
         line-height: var(--text-size);
     }
+    #story img {
+        width: 460px; /* Scale down the image for smaller screens */
+        max-width: 400px; /* Limit the maximum width */ /* Add some spacing */
+        object-fit: contain; /* Ensure proper scaling */
+    }
 }
+
 
 /* <===================GALLERY===================> */
 
@@ -701,4 +713,3 @@ footer h2{
     display: block;
     margin: 0 auto; /* Center the image */
 }
-
