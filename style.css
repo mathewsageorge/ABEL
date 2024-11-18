@@ -780,14 +780,14 @@ footer h2{
     }
 
     h2 {
-        font-size: 22px; /* Slightly larger heading for mobile */
+        font-size: 24px; /* Larger heading for mobile */
     }
 
     p {
-        font-size: 16px; /* Slightly larger paragraph text for mobile */
+        font-size: 14px; /* Smaller paragraph text for mobile */
     }
 
     button {
-        font-size: 16px; /* Slightly larger button text for mobile */
+        font-size: 16px; /* Button text size */
     }
 }
