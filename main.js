@@ -105,8 +105,17 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 // ... existing code ...
 
 
+window.onload = function() {
+  document.getElementById('welcome-popup').classList.add('show');
+};
+
+function closePopup() {
+  document.getElementById('welcome-popup').classList.remove('show');
+}
+
 // Show the RSVP popup
 document.querySelector('.rsvp-btn').addEventListener('click', () => {
+  document.getElementById('welcome-popup').classList.remove('show');
   document.getElementById('rsvp-popup').style.display = 'flex';
 });
 
@@ -118,11 +127,12 @@ document.querySelector('.close-btn').addEventListener('click', () => {
 document.getElementById('rsvp-form').addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Show the success modal immediately
+  // Hide the RSVP popup
   document.getElementById('rsvp-popup').style.display = 'none';
+  // Show the success modal
   document.getElementById('success-modal').style.display = 'flex';
 
-  // Automatically close the modal after 3 seconds
+  // Automatically close the success modal after 3 seconds
   setTimeout(() => {
       document.getElementById('success-modal').style.display = 'none';
   }, 2800);
@@ -144,7 +154,6 @@ document.getElementById('rsvp-form').addEventListener('submit', (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
   }).catch(error => {
-      // Log any errors but do not show an alert to avoid disrupting user experience
       console.error('Submission error:', error);
   });
 
@@ -152,20 +161,11 @@ document.getElementById('rsvp-form').addEventListener('submit', (e) => {
   document.getElementById('rsvp-form').reset();
 });
 
-// Show the RSVP popup
-document.querySelector('.rsvp-btn').addEventListener('click', () => {
-  document.getElementById('rsvp-popup').style.display = 'flex';
+// Add event listener to the "BLESS US" button
+document.getElementById('bless-us-btn').addEventListener('click', function() {
+  confetti({
+      particleCount: 500,
+      spread: 100,
+      origin: { y: 0.6 }
+  });
 });
-
-// Hide the RSVP popup
-document.querySelector('.close-btn').addEventListener('click', () => {
-  document.getElementById('rsvp-popup').style.display = 'none';
-});
-
-window.onload = function() {
-  document.getElementById('welcome-popup').classList.add('show');
-};
-
-function closePopup() {
-  document.getElementById('welcome-popup').classList.remove('show');
-}

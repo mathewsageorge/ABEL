@@ -9,23 +9,25 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
     <!-- Include the canvas-confetti library -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-    <title>Aaron. & Kevin. Wedding Invite</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <title>Aaron & Kevin Wedding Invite</title>
 </head>
 <body>
-    <div id="welcome-popup" class="popup-overlay">
-        <div class="popup-content">
-            
-            <h2>Message from the Couple</h2>
-            <p>We are thrilled to share this special moment of our lives with you. Here, you'll find all the details about our big day, from the wedding ceremony to travel and reception details. Feel free to browse around, leave us a message, and get excited for the celebration! Your presence and support mean the world to us, and we can't wait to celebrate our love with our dearest family and friends. Thank you for being a part of our journey!</p>
+    <div id="welcome-popup" class="popup-overlayy">
+        <div class="popup-content couple-message">
+            <h2>Welcome to Our Love Story!</h2>
+            <p class="couple-message-text">
+                We are overjoyed to share this special moment of our lives with you! Here, you'll find all the details you need about our big day—from the wedding ceremony to travel and reception arrangements. 
+                Feel free to explore, leave us a heartfelt message, and get excited for the celebration of a lifetime! Your presence means everything to us, and we can't wait to celebrate our love alongside our closest family and friends. 
+                Thank you for being a cherished part of our journey.
+            </p>
             <button onclick="closePopup()">Continue</button>
         </div>
-    </div>
+      </div>
 
-    <!-- <audio id="background-audio" src="/A-Thousand-Years(PagalWorld).mp3" preload="auto"></audio> -->
     <div class="music">
         <audio src="/A-Thousand-Years(PagalWorld).mp3" id="my_audio" loop="loop"></audio> 
-      </div>
+    </div>
 
     <nav>
         <input type="checkbox" id="check">
@@ -40,60 +42,42 @@
         </ul>
     </nav>
 
-
     <div class="home hz-margin">
-        <h3>We'er getting married</h3>
+        <h3>We're getting married</h3>
         <h1>Aaron & Kevin</h1>
         <div class="container-out">
-            
             <div class="container-in text">
                 Monday, Jan. 6, 2024 <br>
                 St. Paul's Orthodox Church, Kollad Kottayam
                 <br>
                 <div id="countdown" class="countdown-timer"></div>
-                <!-- <a href="/Aaron & Kevin_Wedding Invite.pdf" class="huge-btn" target="_blank">RSVP</a> -->
-
             </div>
-        
             <div class="home-img" id="home-img-lg"></div>
         </div>
     </div>
 
-
     <div class="home-img home-img-sm"></div>
     <div class="timeline hz-margin reveal">
-        <h2>Celebrating Our Love <br>
-            With Those We Love
-        </h2>
+        <h2>Celebrating Our Love <br> With Those We Love</h2>
         <div class="timeline-container">
             <div class="timeline-img"></div>
             <div class="timings">
                 <h3>01.&nbsp &nbsp Ceremony</h3>
-                <div class="text">Monday, Jan. 6, 2024 <br>
-                    St. Paul's Orthodox Church, Kollad Kottayam</div>
+                <div class="text">Monday, Jan. 6, 2024 <br> St. Paul's Orthodox Church, Kollad Kottayam</div>
                 <h3>02.&nbsp &nbsp Reception</h3>
-                <div class="text">Monday, Jan. 6, 2024 <br>
-                    Windsor Castle, Kodimatha, Kottayam.</div>
+                <div class="text">Monday, Jan. 6, 2024 <br> Windsor Castle, Kodimatha, Kottayam.</div>
             </div>
         </div>
     </div>
 
-
     <div class="v-reposition-container">
         <div class="h-reposition-container">
-
-
             <div id="story" class="hz-margin">
-                <h3 class="reveal">Not Just an <br>
-                    Ordinary Love Story
-                </h3>
+                <h3 class="reveal">Not Just an <br> Ordinary Love Story</h3>
                 <div class="text reveal">
                     <img class="desktop-image" src="Timeline-landscape.png" alt="Description of image">
-                   
-                    
                 </div>
             </div>
-
 
             <div class="gallery hz-margin reveal">
                 <div class="gallery-img"></div>
@@ -101,72 +85,48 @@
                 <div class="gallery-img"></div>
             </div>
 
-
             <div class="quote reveal">
-                <h1>“To the world you are one person, but to one person you are the world”.</h1>
+                <h1>"To the world you are one person, but to one person you are the world".</h1>
                 <div class="author text">Anonymous</div>
             </div>
-
 
             <div class="hands" id="parallax1"></div>
 
             <div id="stay">
                 <h2 class="reveal">Travel and Stay</h2>
                 <div class="stay-container reveal">
-                    <!-- Getting There Section -->
                     <div class="stay-item">
-                        <h3>01. <br>
-                            Getting There
-                        </h3>
+                        <h3>01. <br> Getting There</h3>
                         <div class="text">Easy-to-follow <br> directions to the venue</div>
                         <div class="text links">
-                            <a href="https://www.google.com/maps/dir/?api=1&destination=St.+Paul's+Orthodox+Church,+Kollad+Kottayam" target="_blank">
-                                CHURCH DIRECTIONS
-                            </a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=St.+Paul's+Orthodox+Church,+Kollad+Kottayam" target="_blank">CHURCH DIRECTIONS</a>
                         </div>
                         <div class="text links">
-                            <a href="https://www.google.com/maps/dir/?api=1&destination=Windsor+Castle,+Kodimatha+Kottayam" target="_blank">
-                                RECEPTION DIRECTIONS
-                            </a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Windsor+Castle,+Kodimatha+Kottayam" target="_blank">RECEPTION DIRECTIONS</a>
                         </div>
                     </div>
-                    
-                    <!-- Fun Things to Do Section -->
                     <div class="stay-item">
-                        <h3>02. <br>
-                            Once You're There
-                        </h3>
+                        <h3>02. <br> Once You're There</h3>
                         <div class="text">Some fun things to do in <br> the area</div>
                         <div class="text links">
-                            <a href="https://www.google.com/maps/search/Tourist+Attractions+in+Kottayam/" target="_blank">
-                                OUR RECOMMENDATIONS
-                            </a>
+                            <a href="https://www.google.com/maps/search/Tourist+Attractions+in+Kottayam/" target="_blank">OUR RECOMMENDATIONS</a>
                         </div>
                     </div>
-                    
-                    <!-- Lodging Options Section -->
                     <div class="stay-item">
-                        <h3>03. <br>
-                            Where to Stay
-                        </h3>
+                        <h3>03. <br> Where to Stay</h3>
                         <div class="text">Hotels and B&Bs <br> to check out</div>
                         <div class="text links">
-                            <a href="https://www.google.com/maps/search/Hotels+and+B%26Bs+in+Kottayam/" target="_blank">
-                                LODGING OPTIONS
-                            </a>
+                            <a href="https://www.google.com/maps/search/Hotels+and+B%26Bs+in+Kottayam/" target="_blank">LODGING OPTIONS</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-
 
             <div id="registry">
                 <div class="registry-container reveal">
                     <h3>Promises</h3>
                     <div class="text">
-                        I vow to walk beside you as your partner, your confidant, and your greatest supporter. I promise to cherish and care for you, to celebrate our joys and weather our challenges together. Together, we will build a home filled with love, laughter, and understanding, always putting each other first. You are my heart, my strength, and my greatest blessing. I promise to honor, respect, and love you unconditionally, and to fill our life with happiness, adventure, and unwavering commitment. Here's to a lifetime of love and partnership, my best friend and soulmate.
+                        I vow to walk beside you as your partner, your confidant, and your greatest supporter. I promise to cherish and care for you, to celebrate our joys and weather our challenges together. Together, we will build a home filled with love, laughter, and understanding, always putting each other first. You are my heart, my strength, and my greatest blessing. I promise to honor, respect, and love you unconditionally, and to fill our life with happiness, adventure, and unwavering commitment. Here's to a lifetime of love and partnership, my best friend and soulmate.
                     </div>
                     <button class="huge-btn text" id="bless-us-btn">BLESS US</button>
                 </div>
@@ -174,44 +134,41 @@
             </div>
             <div class="registry-img registry-img-sm"></div>
 
-
             <div class="parting-message reveal">
                 <h1>Hope to See You!</h1>
                 <button class="rsvp-btn huge-btn">RSVP</button>
             </div>
 
-           <!-- Popup RSVP Form -->
-    <div id="rsvp-popup" class="popup-overlay">
-        <div class="popup-content animated-popup">
-            <h2>RSVP to Our Wedding</h2>
-            <form id="rsvp-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required>
-                <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
-                <textarea name="message" placeholder="Message (optional)"></textarea>
-                <button type="submit">Submit</button>
-                <button type="button" class="close-btn">Close</button>
-            </form>
-        </div>
-    </div>
+            <!-- Popup RSVP Form -->
+            <div id="rsvp-popup" class="popup-overlay">
+                <div class="popup-content animated-popup">
+                    <h2>RSVP to Our Wedding</h2>
+                    <form id="rsvp-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+                        <textarea name="message" placeholder="Message (optional)"></textarea>
+                        <button type="submit">Submit</button>
+                        <button type="button" class="close-btn">Close</button>
+                    </form>
+                </div>
+            </div>
 
-  <!-- Success Message Modal -->
-<div id="success-modal" class="success-modal">
-    <div class="success-content">
-        <i class="fas fa-check-circle"></i>
-        <h2>Submitted Successfully!</h2>
-        <p>Thank you for RSVPing. We can't wait to celebrate with you!</p>
-       
-    </div>
-</div>
-
+            <!-- Success Message Modal -->
+            <div id="success-modal" class="success-modal">
+                <div class="success-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Submitted Successfully!</h2>
+                    <p>Thank you for RSVPing. We can't wait to celebrate with you!</p>
+                </div>
+            </div>
 
             <footer>
                 <h2>Give us a Call</h2>
                 <h2>Aaron: 123-456-7890</h2>
                 <h2>Kevin: 123-456-7890</h2>
-                <div class="text">© 2024 for Aaron and Kevin.</div>
+                <div class="text">&copy; 2024 for Aaron and Kevin.</div>
             </footer>
         </div>
     </div>
