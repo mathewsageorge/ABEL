@@ -334,7 +334,7 @@ a:hover{
         margin-bottom: 20px; /* Add spacing below text */
     }
     #story img {
-        width: 900px; /* Adjust the image width for iPads */
+        width: 700px; /* Adjust the image width for iPads */
         max-width: 90%; /* Ensure the image doesn't exceed the container */
         object-fit: contain; /* Maintain aspect ratio */
         margin-bottom: 20px; /* Add spacing below image */
