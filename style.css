@@ -527,69 +527,6 @@ footer h2{
 
 /* ... existing CSS ... */
 
-@media (max-width: 576px) {
-    .countdown-timer {
-        font-size: calc(var(--h3-size) - 4px);
-        padding: 20px;
-    }
-
-    .countdown-message {
-        font-size: 1.4rem;
-    }
-
-    .countdown-values {
-        gap: 15px;
-    }
-
-    .countdown-values span {
-        font-size: 1rem;
-        padding: 10px;
-        min-width: 50px;
-    }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-    .countdown-timer {
-        font-size: var(--h3-size);
-        padding: 25px;
-    }
-
-    .countdown-message {
-        font-size: 1.5rem;
-    }
-
-    .countdown-values {
-        gap: 20px;
-    }
-
-    .countdown-values span {
-        font-size: 1.1rem;
-        padding: 11px;
-        min-width: 60px;
-    }
-}
-
-@media (min-width: 769px) {
-    .countdown-timer {
-        font-size: var(--h3-size);
-        padding: 30px;
-    }
-
-    .countdown-message {
-        font-size: 1.6rem;
-    }
-
-    .countdown-values {
-        gap: 25px;
-    }
-
-    .countdown-values span {
-        font-size: 1.2rem;
-        padding: 12px;
-        min-width: 70px;
-    }
-}
-
 .countdown-timer {
     font-family: 'Quicksand', sans-serif;
     font-size: var(--h3-size);
