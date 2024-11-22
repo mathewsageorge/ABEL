@@ -180,7 +180,7 @@ a:hover{
     justify-content: space-between;
 }
 .home-img{
-    background-image: url(/99266A0C-D5A2-4127-9F0B-439EC99D6F2F.JPG);
+    background-image: url(/NEW.JPG);
     background-size: cover;
     background-position: center;
 }
@@ -325,7 +325,7 @@ a:hover{
     background-position: center;
 }
 .gallery-img:nth-child(1){
-    background-image: url(/98746922-C06C-4FBD-9B65-2D4120DAE4DE.JPG);
+    background-image: url(/99266A0C-D5A2-4127-9F0B-439EC99D6F2F.JPG);
     background-position-x: right;
 }
 .gallery-img:nth-child(3){
@@ -333,7 +333,7 @@ a:hover{
 }
 .gallery-img:nth-child(2){
     background-position-y: top;
-    background-image: url(/7FDAA368-2F3B-442B-8F32-E0D8DFD48D62.JPG);
+    background-image: url(/98746922-C06C-4FBD-9B65-2D4120DAE4DE.JPG);
 }
 @media (max-width:1000px){
     .gallery{
@@ -401,7 +401,7 @@ a:hover{
 }
 .links{
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: underline ;
 }
 @media (max-width:1000px){
     .stay-container{
@@ -537,7 +537,7 @@ footer h2{
 /* RSVP Button */
 .rsvp-btn {
     font-size: 1.2rem;
-    background-color: #ff6b6b;
+    background-color: #b1224b;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -547,7 +547,7 @@ footer h2{
 }
 
 .rsvp-btn:hover {
-    background-color: #ff5252;
+    background-color: #b1224b;
     transform: scale(1.05);
 }
 
@@ -847,4 +847,10 @@ footer h2{
           font-size: 16px;
       }
   }
+
+  
+
+  
+
+
 
