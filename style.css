@@ -290,8 +290,7 @@ a:hover{
         width: 100%;
         font-size: var(--h3-size);
         position: relative;
-        bottom: 100px;
-         /* Center-align heading */
+        bottom: 100px; /* Center-align heading */
     }
     #story p {
         width: 100%;
@@ -307,6 +306,31 @@ a:hover{
         bottom: 50px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #story {
+        flex-direction: column;
+        align-items: center; /* Center-align content for iPad */
+    }
+    #story h3 {
+        width: 90%; /* Slightly smaller width for better layout on iPads */
+        font-size: var(--h3-size);
+        text-align: center; /* Center-align the heading */
+        margin-bottom: 20px; /* Add space below heading */
+    }
+    #story p {
+        width: 90%; /* Adjust width for better readability */
+        font-size: var(--text-size);
+        line-height: 1.5; /* Slightly increase line height */
+        margin-bottom: 20px; /* Add spacing below text */
+    }
+    #story img {
+        width: 900px; /* Adjust the image width for iPads */
+        max-width: 90%; /* Ensure the image doesn't exceed the container */
+        object-fit: contain; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add spacing below image */
+    }
+}   
 
 
 /* <===================GALLERY===================> */
