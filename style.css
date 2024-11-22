@@ -300,7 +300,7 @@ a:hover{
         font-size: var(--h3-size);
         position: relative;
         bottom: 100px;
-         / Center-align heading /
+        
     }
     #story p {
         width: 100%;
@@ -309,9 +309,9 @@ a:hover{
         line-height: var(--text-size);
     }
     #story img {
-        width: 460px; / Scale down the image for smaller screens /
-        max-width: 400px; / Limit the maximum width / / Add some spacing /
-        object-fit: contain; / Ensure proper scaling */
+        width: 460px;
+        max-width: 400px; 
+        object-fit: contain; 
         position: relative;
         bottom: 50px;
     }
