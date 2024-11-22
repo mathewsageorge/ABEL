@@ -278,7 +278,7 @@ a:hover{
 }
 
 #story img {
-    width: 2000px; /* Scale down the image for smaller screens */
+    width: 1000px; /* Scale down the image for smaller screens */
    /* Limit the maximum width */ /* Add some spacing */
     object-fit: contain; /* Ensure proper scaling */
     position: relative;
