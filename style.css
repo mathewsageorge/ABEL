@@ -277,14 +277,7 @@ a:hover{
     line-height: var(--h3-size);
 }
 
-#story img {
-    width: 1000px; /* Scale down the image for smaller screens */
-   /* Limit the maximum width */ /* Add some spacing */
-    object-fit: contain; /* Ensure proper scaling */
-    position: relative;
-    bottom: 50px;
-    
-}
+
 
 @media (max-width: 1000px) {
     .h-reposition-container {
