@@ -264,6 +264,7 @@ a:hover{
     display: flex;
     flex-direction: row;
     margin: 10vh 0;
+    position: relative; /* Allows overlap handling */
 }
 
 #story h3 {
@@ -277,8 +278,17 @@ a:hover{
     line-height: var(--h3-size);
 }
 
+#story img {
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    width: 67vw; /* Makes the image significantly larger on desktop */
+    max-width: 1200px; /* Restricts the maximum size */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    position: relative; /* Ensures it overlaps properly */
+    z-index: 1; /* Keeps the image on top of other elements */
+}
 
-
+/* Responsive styles for smaller screens */
 @media (max-width: 1000px) {
     .h-reposition-container {
         position: relative;
@@ -293,7 +303,6 @@ a:hover{
         font-size: var(--h3-size);
         position: relative;
         bottom: 100px;
-        
     }
     #story p {
         width: 100%;
@@ -302,13 +311,13 @@ a:hover{
         line-height: var(--text-size);
     }
     #story img {
-        width: 460px;
-        max-width: 400px; 
+        width: 90%; /* Makes the image prominent on mobile */
+        max-width: 700px; /* Increases max size on smaller screens */
         object-fit: contain; 
-        position: relative;
-        bottom: 50px;
+        margin: 20px auto; /* Adds spacing above and below the image */
     }
 }
+
 
 
 /* <===================GALLERY===================> */
@@ -327,11 +336,11 @@ a:hover{
     background-position: center;
 }
 .gallery-img:nth-child(1){
-    background-image: url(/99266A0C-D5A2-4127-9F0B-439EC99D6F2F.JPG);
+    background-image: url(/ECA27F3D-7AA2-4E20-8B5C-8CB154BD7B47.JPG);
     background-position-x: right;
 }
 .gallery-img:nth-child(3){
-    background-image: url(/ECA27F3D-7AA2-4E20-8B5C-8CB154BD7B47.JPG);
+    background-image: url(/99266A0C-D5A2-4127-9F0B-439EC99D6F2F.JPG);
 }
 .gallery-img:nth-child(2){
     background-position-y: top;

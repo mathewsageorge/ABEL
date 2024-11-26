@@ -85,7 +85,7 @@ function updateCountdown() {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   countdownElement.innerHTML = `
-      <div class="countdown-message">This much time to go!</div>
+      <div class="countdown-message">Days until we tie the knot!</div>
       <div class="countdown-values">
           <span class="countdown-item">${days}<small>Days</small></span>
           <span class="countdown-item">${hours}<small>Hours</small></span>
