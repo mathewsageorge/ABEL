@@ -297,24 +297,34 @@ a:hover{
     #story {
         flex-direction: column;
         align-items: center; 
+        padding: 5vh 2vw; /* Reduces padding for smaller screens */
     }
     #story h3 {
         width: 100%;
         font-size: var(--h3-size);
         position: relative;
-        bottom: 100px;
+        margin-bottom: 0; /* Removes bottom margin to minimize space */
     }
     #story p {
         width: 100%;
-        margin: 5px 0;
+        margin: 0 auto; /* Removes extra margin space */
         font-size: var(--text-size);
         line-height: var(--text-size);
+        text-align: center; /* Centers text on mobile */
     }
     #story img {
-        width: 90%; /* Makes the image prominent on mobile */
-        max-width: 700px; /* Increases max size on smaller screens */
-        object-fit: contain; 
-        margin: 20px auto; /* Adds spacing above and below the image */
+        width: 100%; /* Makes the image occupy full width on mobile */
+        max-width: none; /* Removes max size restriction */
+        object-fit: contain;
+        margin: 10px auto; /* Adds minimal spacing */
+    }
+}
+
+/* For very small screens (below 600px) */
+@media (max-width: 600px) {
+    #story img {
+        width: 120%; /* Makes the image larger */
+        margin: 0 auto; /* Ensures no extra spacing */
     }
 }
 
